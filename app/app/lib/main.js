@@ -21,5 +21,3 @@ require('yoin-views-webapp');
 
 Me = {};
 require('app/utils/application');
-
-

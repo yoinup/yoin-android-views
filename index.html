@@ -8,18 +8,34 @@
 
 </head>
 <body>
-    <div id="prueba" class="nine mobile-three columns">
-        WebApp is ON!
-    </div>
-    <div id="prueba" class="three mobile-one columns">
-        YEP!
-    </div>
-    <!--<div class="invite-button">
-        <div class="invite-button-inner">
-        </div>
-    </div>-->
+  <div id="fb-root"> </div>
+
+  <div id="app" class="app" >
+
+
+  </div>
 </body>
 </html>
 
 <link rel="stylesheet" type="text/css" href="source/project.css">
 <script type="text/javascript" src="source/app.js"></script>
+
+<script type="text/javascript">
+
+    // Load the SDK Asynchronously
+
+	minispade.require('app'); 
+
+    var screens = location.search.match(/screen=([^&]+)/),
+        screen;
+
+    if ( screens ) {
+        screen = screens[1];
+        minispade.require('app/screens/'+screen); 
+
+    } else {
+
+        minispade.require('app/screens/login'); 
+    }
+
+</script>

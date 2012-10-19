@@ -1,15 +1,16 @@
 GIT
   remote: https://github.com/livingsocial/rake-pipeline.git
-  revision: 3914452278165b7eb3a79071d3b63b46fee59a2f
+  revision: 543f4322fe70facee9572d29ddabf7f090dad68a
+  ref: 543f4322fe70facee9572d29ddabf7f090dad68a
   specs:
     rake-pipeline (0.6.0)
-      json
       rake (~> 0.9.0)
       thor
 
 GIT
   remote: https://github.com/wycats/rake-pipeline-web-filters.git
-  revision: 1e8aede170297ad08b364b07955b43355718df19
+  revision: 81a22fb0808dfdeab8ed92d5d8c898ad198b9938
+  ref: 81a22fb0808dfdeab8ed92d5d8c898ad198b9938
   specs:
     rake-pipeline-web-filters (0.6.0)
       rack
@@ -30,7 +31,6 @@ GEM
       execjs
       multi_json (>= 1.3)
       rake
-    json (1.7.5)
     less (2.2.2)
       commonjs (~> 0.2.6)
     libv8 (3.3.10.4)
