@@ -6,7 +6,7 @@ pull:
 	cd app/submodules/yoin-views; git checkout master; git pull origin master;git checkout master; cd ../../..;\
 	cd app/submodules/yoin-views-webapp; git checkout master; git pull origin master;git checkout master; cd ../../..;\
 
-PORT ?= 8080
+PORT ?= 9696
 less:
 
 	rm -rf tmp/* source/*
