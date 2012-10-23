@@ -9,8 +9,8 @@ App = Me.Application.create({
 
 		invitation.addObserver('isLoaded', function(item) {
 
-			self.view = Yvw.InvitationScreenView.create({
-				invitation: invitation
+			self.view = Yvw.QrScreenView.create({
+				invitation: null
 			});
 			self.view.appendTo('#app');
 
