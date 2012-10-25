@@ -5,14 +5,20 @@ App = Me.Application.create({
 		this._super();
 
 		var self = this,
-				invitation = this.store.find(Yn.Invitation, 1);
+				invitation = this.store.find(Yn.Invitation, 1),
+				user = this.store.find(Yn.User, 17 );
 
 		invitation.addObserver('isLoaded', function(item) {
 
-			self.view = Yvw.QrScreenView.create({
-				invitation: null
+			user.addObserver('isLoaded', function(item) {
+
+				self.view = Yvw.QrScreenView.create({
+					selectedUnexchangedInvitation: null,
+					user: user
+				});
+				self.view.appendTo('#app');
+
 			});
-			self.view.appendTo('#app');
 
 		});
 
