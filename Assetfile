@@ -125,6 +125,10 @@ input "."  do
 		filter ConcatFilter, "projecttmp.css"
 	end
 
+	match "app/submodules/yoin-views-webapp/css/foundation.css" do
+		filter ConcatFilter, "projecttmp.css"
+	end
+
 	match "app/submodules/yoin-views/reset/normalize.css" do
 		filter ConcatFilter, "projecttmp.css"
 	end
