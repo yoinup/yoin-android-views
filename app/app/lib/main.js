@@ -1,6 +1,5 @@
 require('ember-touch');
 require('ember-data');
-require('ember-data-tastypie-adapter');
 
 
 
@@ -16,7 +15,7 @@ require('yoin-ember/models');
 require('yoin-ember/fixtures/initial');
 
 require('yoin-views');
-require('yoin-views-webapp');
+require('yoin-views-android');
 
 
 Me = {};

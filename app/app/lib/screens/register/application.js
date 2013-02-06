@@ -2,11 +2,11 @@ App = Me.Application.create({
 
 	run: function() {
 
-		this._super();
+		this.loadData();
 
 		var self = this;
 		
-	self.view = Yvw.RegisterScreenView.create({});
+		self.view = Yva.RegisterScreenView.create({});
 		self.view.appendTo('#app');
 
 	}

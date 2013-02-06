@@ -2,11 +2,10 @@ App = Me.Application.create({
 
 	run: function() {
 
-		this._super();
+		this.loadData();
 
     var self = this;
-    
-    self.view = Yvw.LandingScreenView.create({});
+    self.view = Yva.LoginScreenView.create({});
 		self.view.appendTo('#app');
 
   }

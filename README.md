@@ -1,2 +1,2 @@
-yoin-webapp-views
+yoin-android-views
 =================
