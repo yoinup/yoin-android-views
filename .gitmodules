@@ -16,3 +16,6 @@
 [submodule "app/submodules/yoin-views-android"]
 	path = app/submodules/yoin-views-android
 	url = git@github.com:ppcano/yoin-views-android.git
+[submodule "app/submodules/yoin-views-iphone"]
+	path = app/submodules/yoin-views-iphone
+	url = git@github.com:ppcano/yoin-views-iphone.git

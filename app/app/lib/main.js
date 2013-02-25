@@ -16,6 +16,7 @@ require('yoin-ember/fixtures/initial');
 
 require('yoin-views');
 require('yoin-views-android');
+require('yoin-views-iphone');
 
 
 Me = {};

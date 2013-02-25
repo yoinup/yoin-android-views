@@ -6,7 +6,7 @@ App = Me.Application.create({
 
 		var self = this;
 		
-		self.view = Yva.RegisterScreenView.create({});
+		self.view = Yvi.AboutScreenView.create({});
 		self.view.appendTo('#app');
 
 	}

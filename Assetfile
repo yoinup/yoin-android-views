@@ -13,7 +13,13 @@ Encoding.default_external = Encoding::UTF_8
 Encoding.default_internal = Encoding::UTF_8
 
 output "source/assets2"
-input "app/submodules/yoin-views-android/assets2"  do
+input "app/submodules/yoin-views-android/assets3"  do
+	match "**/*" do
+    copy
+  end
+end
+
+input "app/submodules/yoin-views-iphone/assets2"  do
 	match "**/*" do
     copy
   end
@@ -42,7 +48,13 @@ input "."  do
 		concat "projecttmp.css"
 	end
 
-	match "app/submodules/yoin-views/less/views/**/*.less" do
+	match "app/submodules/yoin-views-iphone/less/views/screens/**/*.less" do
+		filter Yoin::LessFilter 
+		concat "projecttmp.css"
+	end
+
+
+	match "app/submodules/yoin-views/less/query/android/**/*.less" do
 		filter Yoin::LessFilter
 		concat "projecttmp.css"
 	end
@@ -54,6 +66,12 @@ input "."  do
 		concat "projecttmp.css"
 	end
 
+	match "app/submodules/yoin-views/less/views/**/*.less" do
+		filter Yoin::LessFilter
+		concat "projecttmp.css"
+	end
+
+
 	match "app/submodules/yoin-views/reset/normalize.css" do
 		concat "projecttmp.css"
 	end
@@ -63,6 +81,11 @@ end
 input "app"  do
 
 	match "submodules/yoin-views-android/templates/**/*.handlebars" do
+		filter Yoin::HandlebarsPrecompiler
+		concat "apptmp.js"
+	end
+
+	match "submodules/yoin-views-iphone/templates/**/*.handlebars" do
 		filter Yoin::HandlebarsPrecompiler
 		concat "apptmp.js"
 	end
@@ -94,7 +117,7 @@ input "app"  do
 	 concat "apptmp.js"
 	end
 
-	match "submodules/{yoin-ember,yoin-views,yoin-views-android}/lib/**/*.js" do
+	match "submodules/{yoin-ember,yoin-views,yoin-views-android,yoin-views-iphone}/lib/**/*.js" do
 		minispade :rewrite_requires => true, :string=> false, :module_id_generator => proc { |input|
 			id = input.path.dup
 			id.sub!('submodules/', '')
@@ -139,10 +162,6 @@ output "source"
 input "tmp/source"  do
 
 	match "apptmp.js" do
-    if production
-      filter EmberProductionFilter
-      uglify( {:copyright => false} )
-    end
 		concat "app.js"
 	end
 
