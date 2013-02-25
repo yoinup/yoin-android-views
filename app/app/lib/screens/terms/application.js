@@ -5,8 +5,7 @@ App = Me.Application.create({
 		this.loadData();
     var self = this;
 
-    self.view = Yvi.LegalScreenView.create({
-      isPrivacy: false,
+    self.view = Yvi.TermsScreenView.create({
 			hasFooter: false
     });
     self.view.appendTo('#app');

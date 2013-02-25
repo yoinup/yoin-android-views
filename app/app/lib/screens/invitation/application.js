@@ -21,18 +21,13 @@ App = Me.Application.create({
           self.view = Yvi.InvitationScreenView.create({
             loggedUser: loggedUser,
             invitation: invitation,
-						isAndroid: true
+						hasFooter: false
           });
           self.view.appendTo('#app');
         });
 
       });
 		});
-
-		self.footer = Yva.FooterView.create({
-			currentTabView: 'me'
-		});
-		self.footer.appendTo('#app');
 
 	}
 
