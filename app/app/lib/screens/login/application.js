@@ -5,7 +5,7 @@ App = Me.Application.create({
 		this.loadData();
 
     var self = this;
-    self.view = Yva.LoginScreenView.create({});
+    self.view = Yvi.LoginScreenView.create({});
 		self.view.appendTo('#app');
 
   }
