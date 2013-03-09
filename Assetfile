@@ -145,6 +145,9 @@ input "app"  do
    filter Yoin::AddMicroLoader, :global => true
 	end
 
+	match "submodules/yoin-views-iphone/vendor/*.js" do
+		concat "apptmp.js"
+	end
 
 	match "submodules/yoin-views/vendor/*.js" do
 		concat "apptmp.js"

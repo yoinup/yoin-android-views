@@ -12,19 +12,26 @@ App = Me.Application.create({
 
 		invitation.one('didLoad', function(item) {
 
-      self.view = Yvi.ScanInvitationScreenView.create({
-        invitation: invitation
+      self.footer = Yva.FooterView.create({
+        currentTabView: 'qr'
       });
 
-			self.view.appendTo('#app');
+      self.footer.one('didInsertElement', function() {
+
+        self.view = Yvi.ScanInvitationScreenView.create({
+          invitation: invitation
+        });
+
+        self.view.appendTo('#app');
+
+      });
+
+      self.footer.appendTo('#app');
+
 
 		});
 
-		this.footer = Yvi.FooterView.create({
-			currentTabView: 'qr'
-		});
 
-		this.footer.appendTo('#app');
 
 	}
 

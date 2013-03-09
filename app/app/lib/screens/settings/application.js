@@ -13,7 +13,7 @@ App = Me.Application.create({
 
       self.view = Yvi.SettingsScreenView.create({
         user: user,
-        cities: cities
+        //cities: cities
       });
       self.view.appendTo('#app');
 
