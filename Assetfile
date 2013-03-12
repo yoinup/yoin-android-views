@@ -117,6 +117,17 @@ input "app"  do
 	 concat "apptmp.js"
 	end
 
+	match "submodules/yoin-views/lib-android/**/*.js" do
+		minispade :rewrite_requires => true, :string=> false, :module_id_generator => proc { |input|
+			id = input.path.dup
+			id.sub!('submodules/', '')
+			id.sub!(/\.js$/, '')
+			id.sub!(/\/main$/, '')
+			id
+		}
+	 concat "apptmp.js"
+	end
+
 	match "submodules/{yoin-ember,yoin-views,yoin-views-android,yoin-views-iphone}/lib/**/*.js" do
 		minispade :rewrite_requires => true, :string=> false, :module_id_generator => proc { |input|
 			id = input.path.dup

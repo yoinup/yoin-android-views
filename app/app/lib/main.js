@@ -15,6 +15,7 @@ require('yoin-ember/models');
 require('yoin-ember/fixtures/initial');
 
 require('yoin-views');
+require('yoin-views/lib-android');
 require('yoin-views-android');
 require('yoin-views-iphone');
 
