@@ -48,11 +48,13 @@ App = Me.Application.create({
         venue = App.store.find(Yn.Venue, 236);
         venue.one('didLoad', function(item) {
 
-          user.set('fbChannel', null);
-          fbUsers = Em.A([]);
-          fbUsers.set('isLoaded', true);
-          friendUsers = Em.A([]);
-          friendUsers.set('isLoaded', true);
+          
+          //user.set('fbChannel', null);
+          //fbUsers = Em.A([]);
+          //fbUsers.set('isLoaded', true);
+          //friendUsers = Em.A([]);
+          //friendUsers.set('isLoaded', true);
+
 
           self.view = Yvi.ChooseUserScreenView.create({
             user: user,
